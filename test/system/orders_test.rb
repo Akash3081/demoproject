@@ -1,5 +1,6 @@
 require "application_system_test_case"
 class OrdersTest < ApplicationSystemTestCase
+  include ActiveJob::TestHelper
   test "check dynamic fields" do
 
     visit store_index_url
@@ -38,4 +39,5 @@ class OrdersTest < ApplicationSystemTestCase
     assert has_no_field? 'Expiration date'
     assert has_field? 'Po number'
   end
+
 end
