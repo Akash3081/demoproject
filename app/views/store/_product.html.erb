@@ -8,7 +8,7 @@
           <%= sanitize(product.description) %>
         </p>
       <div class="mt-3">
-        <%= number_to_currency(product.price) %>
+        <%#= number_to_currency(product.price) %>
         <%= button_to 'Add to Cart',
         line_items_path(product_id: product),
         form_class: 'inline',
